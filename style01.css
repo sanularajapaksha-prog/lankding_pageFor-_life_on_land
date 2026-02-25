@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 300px  650px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 100, 0, 0.8);
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: -2;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  align-items: center;
+}
+.navbar a.active, .navbar a:hover {
+ text-decoration:underline;
+ }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text a {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.hero-text a:hover {
+  background-color: white;
+  color: rgba(0, 100, 0, 0.8)
+}
+
+.content {
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 1rem;
+  color: #004d00;
+}
+
+.card p {
+  margin: 0 1rem 1.5rem 1rem;
+  color: #333;
+}
+
+footer {
+  background: #003300;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

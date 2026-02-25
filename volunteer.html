@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer - Life on Land</title>
+  <link rel="stylesheet" href="globle.css" />
+  <link rel="stylesheet" href="volunteer.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌱 Life on Land</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="volunteer.html" class="active">Volunteer</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Join Our Green Mission</h1>
+    <p>Be a part of reforestation, wildlife protection, and sustainable living by volunteering with us.</p>
+    <a href="#signup" class="btn">Become a Volunteer</a>
+  </section>
+
+  <section class="activities">
+    <h2>Volunteer Opportunities</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="tree-planting.jpg" alt="Tree Planting" />
+        <h3>Tree Planting</h3>
+        <p>Help restore ecosystems by planting native trees in degraded forests and lands.</p>
+      </div>
+      <div class="card">
+        <img src="clean-up.jpg" alt="Forest Clean-up" />
+        <h3>Forest Clean-up</h3>
+        <p>Participate in cleaning forest reserves and protecting wildlife from plastic pollution.</p>
+      </div>
+      <div class="card">
+        <img src="awareness.jpg" alt="Awareness Campaigns" />
+        <h3>Awareness Drives</h3>
+        <p>Educate local communities and schools on conservation and sustainable practices.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="signup">
+    <h2>Volunteer Registration</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="interest">Area of Interest:</label>
+      <select id="interest" name="interest">
+        <option value="trees">Tree Planting</option>
+        <option value="cleanup">Forest Clean-up</option>
+        <option value="awareness">Awareness Campaign</option>
+      </select>
+
+      <label for="message">Why do you want to volunteer?</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Life on Land. All rights reserved.</p>
+  </footer>
+</body>
+</html>

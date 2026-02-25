@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Editor - Student 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(45deg, #1B5E20, #388E3C);
+      color: white;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .role-badge {
+      display: inline-block;
+      background: #C8E6C9;
+      color: #1B5E20;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #2E7D32;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #1B5E20;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #4CAF50;
+    }
+
+    h2 {
+      color: #1B5E20;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #E8F5E8;
+    }
+
+    h3 {
+      color: #2E7D32;
+      margin-bottom: 12px;
+      font-size: 1.4em;
+    }
+
+    .task-list {
+      background: #F1F8E9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .task-list li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .task-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .code-highlight {
+      background: #1B5E20;
+      color: #C8E6C9;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    .technique-box {
+      background: #E8F5E8;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      border-left: 4px solid #4CAF50;
+    }
+
+    .link-button {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .link-button:hover {
+      background: #388E3C;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .validation-link {
+      background: #66BB6A;
+    }
+
+    .validation-link:hover {
+      background: #4CAF50;
+    }
+
+    .challenge-box {
+      background: #FFF8E1;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #8BC34A;
+      margin: 15px 0;
+    }
+
+    .accessibility-box {
+      background: #E8F5E8;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #4CAF50;
+      margin: 15px 0;
+    }
+
+    .compliance-box {
+      background: #F3E5F5;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #81C784;
+      margin: 15px 0;
+    }
+	.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+    .references {
+      background: #F1F8E9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .references ol {
+      padding-left: 20px;
+    }
+
+    .references li {
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top:hover {
+      background: #388E3C;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="forest-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+  </div>
+  
+  <div class="container">
+    <header>
+      <h1>Page Editor - Student 2</h1>
+      <div class="role-badge">Lead Developer & Template Designer</div>
+    </header>
+	
+	
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#template">Website Template</a></li>
+        <li><a href="#homepage">Home Page</a></li>
+        <li><a href="#table">Table Page</a></li>
+        <li><a href="#content">Content Page</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#compliance">Compliance</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
+
+
+
+    <section id="overview" class="section">
+      <h2>Content Overview</h2>
+      <h3>Student Information</h3>
+      <p><strong>Name:</strong> Sanula Rajapaksha</p>
+      <p><strong>Role:</strong> Lead Developer & Template Designer (Student 2)</p>
+
+      <h3>Completed Tasks/Pages</h3>
+      <div class="task-list">
+        <ul>
+          <li>Website Style & Navigation (Template + Global CSS)</li>
+          <li>Home Page Implementation</li>
+          <li>Table Page Development </li>
+          <li>Navigation Bar Design </li>
+          <li>Content_ST2.html</li>
+          <li>Page Editor (this report)</li>
+          <li>Validation Page</li>
+        </ul>
+      </div>
+
+      <p><strong>Page Links:</strong></p>
+      <a href="home.html" target="_blank" class="link-button">View Home Page</a>
+      <a href="table.html" target="_blank" class="link-button">View Table Page</a>
+      <a href="biodiversity.html" target="_blank" class="link-button">View Content Page</a>
+      <a href="validation_ST02.html#content-validation" target="_blank" class="validation-link link-button">Content pages
+        Validation</a>
+      <a href="validation_ST02.html#home-validation" target="_blank" class="validation-link link-button">Home Page
+        Validation</a>
+      <a href="validation_ST02.html#table-validation" target="_blank" class="validation-link link-button">Table Validation</a>
+    </section>
+
+    <section id="template" class="section">
+      <h2>Website Template & Global CSS</h2>
+
+      <h3>Technical Implementation</h3>
+      <div class="technique-box">
+        <h4>HTML Structure</h4>
+        <p>Created a standardized template using semantic HTML5 elements:</p>
+        <ul>
+          <li><span class="code-highlight">&lt;header&gt;</span> - Contains navigation bar and website
+            identity</li>
+          <li><span class="code-highlight">&lt;main&gt;</span> - Content area for individual pages</li>
+          <li><span class="code-highlight">&lt;footer&gt;</span> - Links to page editors and accessibility
+            info</li>
+          <li><span class="code-highlight">&lt;div class="wrapper"&gt;</span> - Centers content and adds
+            margins</li>
+        </ul>
+      </div>
+
+      <div class="technique-box">
+        <h4>CSS Techniques Used</h4>
+        <ul>
+          <li><span class="code-highlight">Flexbox Layout</span> - For responsive navigation and content
+            alignment</li>
+          <li><span class="code-highlight">CSS Grid</span> - For complex layout structures</li>
+          <li><span class="code-highlight">CSS Variables</span> - For consistent color palette across site
+          </li>
+          <li><span class="code-highlight">Media Queries</span> - For responsive design across devices</li>
+          <li><span class="code-highlight">Hover Effects</span> - For interactive elements</li>
+        </ul>
+      </div>
+
+      <div class="technique-box">
+        <h4>Navigation Bar Implementation</h4>
+        <p>Key features implemented:</p>
+        <ul>
+          <li><span class="code-highlight">position: fixed</span> - Keeps navbar visible while scrolling</li>
+          <li><span class="code-highlight">z-index: 1000</span> - Ensures navbar stays above other content
+          </li>
+          <li><span class="code-highlight">:hover pseudo-class</span> - Visual feedback on link hover</li>
+          <li><span class="code-highlight">.active class</span> - Highlights current page</li>
+          <li><span class="code-highlight">transition</span> - Smooth animations for user interactions</li>
+        </ul>
+      </div>
+
+      <h3>Design Decisions</h3>
+      <p>The template was designed with consistency and usability in mind. The color scheme uses a professional
+        green palette that aligns with environmental and sustainability themes. The navigation structure follows
+        standard web conventions with clear visual hierarchy.</p>
+    </section>
+
+    <section id="homepage" class="section">
+      <h2>Home Page</h2>
+      <a href="home.html" target="_blank" class="link-button">View Home Page</a>
+      <a href="validation_ST02.html#table-validation" target="_blank" class="validation-link link-button">View
+        Validation</a>
+
+      <h3>Technical Implementation</h3>
+      <div class="technique-box">
+        <h4>HTML Structure</h4>
+        <ul>
+          <li><span class="code-highlight">&lt;section&gt;</span> - Semantic sectioning of content areas</li>
+          <li><span class="code-highlight">&lt;img&gt;</span> - Logo with proper alt text for accessibility
+          </li>
+          <li><span class="code-highlight">&lt;article&gt;</span> - Mission statement content</li>
+          <li><span class="code-highlight">&lt;div class="card-container"&gt;</span> - Container for content
+            page links</li>
+        </ul>
+      </div>
+
+      <div class="technique-box">
+        <h4>CSS Techniques</h4>
+        <ul>
+          <li><span class="code-highlight">CSS Grid</span> - For responsive card layout</li>
+          <li><span class="code-highlight">transform: scale()</span> - Hover animations on cards</li>
+          <li><span class="code-highlight">box-shadow</span> - Elevation effects for cards</li>
+          <li><span class="code-highlight">background: linear-gradient()</span> - Modern gradient backgrounds
+          </li>
+          <li><span class="code-highlight">border-radius</span> - Rounded corners for modern appearance</li>
+        </ul>
+      </div>
+
+      <h3>Interactive Elements</h3>
+      <p>The home page features interactive card tiles linking to content pages. Each card includes:</p>
+      <ul>
+        <li>Hover effects with scaling and shadow transitions</li>
+        <li>Relevant imagery representing the linked content</li>
+        <li>Clear typography hierarchy</li>
+        <li>Responsive design that adapts to different screen sizes</li>
+      </ul>
+    </section>
+
+    <section id="table" class="section">
+      <h2>Table Page</h2>
+      <a href="table.html" target="_blank" class="link-button">View Table Page</a>
+      <a href="validation_ST02.html#table-validation" target="_blank" class="validation-link link-button">View Validation</a>
+
+      <h3>Technical Implementation</h3>
+      <div class="technique-box">
+        <h4>HTML Table Structure</h4>
+        <ul>
+          <li><span class="code-highlight">&lt;table&gt;</span> - Main table element with semantic structure
+          </li>
+          <li><span class="code-highlight">&lt;thead&gt;</span> - Table header with thumbnail images</li>
+          <li><span class="code-highlight">&lt;tbody&gt;</span> - Table body with data rows</li>
+          <li><span class="code-highlight">rowspan/colspan</span> - Merged cells for complex layouts</li>
+          <li><span class="code-highlight">aria-label</span> - Accessibility attributes for screen readers
+          </li>
+        </ul>
+      </div>
+
+      <div class="technique-box">
+        <h4>CSS Styling Techniques</h4>
+        <ul>
+          <li><span class="code-highlight">nth-child()</span> - Zebra striping for alternating row colors</li>
+          <li><span class="code-highlight">border-collapse</span> - Clean table borders</li>
+          <li><span class="code-highlight">hover effects</span> - Interactive row highlighting</li>
+          <li><span class="code-highlight">box-shadow</span> - Table elevation and modern appearance</li>
+          <li><span class="code-highlight">position: relative</span> - For tooltip positioning</li>
+        </ul>
+      </div>
+
+      <h3>Advanced Features</h3>
+      <ul>
+        <li><strong>Tooltip System:</strong> Hover over thumbnails to see additional information</li>
+        <li><strong>Interactive Elements:</strong> Clickable links within table cells</li>
+        <li><strong>Visual Hierarchy:</strong> Clear distinction between headers and data</li>
+        <li><strong>Responsive Design:</strong> Table adapts to different screen sizes</li>
+        <li><strong>Accessibility:</strong> Proper ARIA labels and keyboard navigation support</li>
+      </ul>
+    </section>
+
+    <section id="content" class="section">
+      <h2>Content Page (content_ST2.html)</h2>
+      <a href="biodiversity.html" target="_blank" class="link-button">View Content Page</a>
+      <a href="validation_ST02.html#content" target="_blank" class="validation-link link-button">View
+        Validation</a>
+
+      <h3>Technical Implementation</h3>
+      <div class="technique-box">
+        <h4>HTML Structure</h4>
+        <ul>
+          <li><span class="code-highlight">&lt;h1&gt; to &lt;h6&gt;</span> - Proper heading hierarchy</li>
+          <li><span class="code-highlight">&lt;nav&gt;</span> - Internal navigation menu</li>
+          <li><span class="code-highlight">&lt;section id="..."&gt;</span> - Sectioned content for internal
+            linking</li>
+          <li><span class="code-highlight">&lt;img&gt;</span> - Minimum four images with alt text</li>
+          <li><span class="code-highlight">&lt;a href="#top"&gt;</span> - "Go to top" functionality</li>
+        </ul>
+      </div>
+
+      <div class="technique-box">
+        <h4>CSS Techniques</h4>
+        <ul>
+          <li><span class="code-highlight">position: fixed</span> - Fixed "Go to top" button</li>
+          <li><span class="code-highlight">scroll-behavior: smooth</span> - Smooth scrolling between sections
+          </li>
+          <li><span class="code-highlight">margin and padding</span> - Proper content spacing</li>
+          <li><span class="code-highlight">responsive images</span> - Scalable image sizing</li>
+        </ul>
+      </div>
+
+      <h3>Content Features</h3>
+      <ul>
+        <li><strong>Internal Navigation:</strong> Quick links to different sections</li>
+        <li><strong>Semantic Structure:</strong> Logical heading hierarchy</li>
+        <li><strong>Rich Media:</strong> Relevant images with proper styling</li>
+        <li><strong>User Experience:</strong> Always-visible "Go to top" button</li>
+      </ul>
+    </section>
+
+    <section id="challenges" class="section">
+      <h2>Challenges and Lessons Learned</h2>
+
+      <div class="challenge-box">
+        <h3>Challenge 1: Cross-Browser Compatibility</h3>
+        <p><strong>Issue:</strong> CSS Grid and Flexbox behaved differently across browsers, particularly in
+          older versions.</p>
+        <p><strong>Solution:</strong> Implemented fallback styles and used autoprefixer to ensure compatibility.
+          Added vendor prefixes for critical CSS properties.</p>
+        <p><strong>Lesson:</strong> Always test across multiple browsers and provide progressive enhancement.
+        </p>
+      </div>
+
+      <div class="challenge-box">
+        <h3>Challenge 2: Responsive Design Complexity</h3>
+        <p><strong>Issue:</strong> Creating a navigation system that works seamlessly across desktop, tablet,
+          and mobile devices.</p>
+        <p><strong>Solution:</strong> Used CSS Grid with media queries and implemented a mobile-first approach.
+          Created a collapsible navigation for smaller screens.</p>
+        <p><strong>Lesson:</strong> Mobile-first design principles lead to better overall user experience.</p>
+      </div>
+
+      <div class="challenge-box">
+        <h3>Challenge 3: Team Coordination</h3>
+        <p><strong>Issue:</strong> Ensuring all team members could integrate their pages with the global
+          template consistently.</p>
+        <p><strong>Solution:</strong> Created comprehensive documentation and provided clear integration
+          guidelines. Established a shared folder structure and naming conventions.</p>
+        <p><strong>Lesson:</strong> Clear communication and documentation are essential for successful team
+          projects.</p>
+      </div>
+    </section>
+
+    <section id="accessibility" class="section">
+      <h2>Accessibility</h2>
+
+      <div class="accessibility-box">
+        <h3>Accessibility Features Implemented</h3>
+        <ul>
+          <li><strong>Semantic HTML:</strong> Used proper heading hierarchy (h1-h6) and semantic elements</li>
+          <li><strong>Alt Text:</strong> All images include descriptive alternative text</li>
+          <li><strong>Keyboard Navigation:</strong> All interactive elements are keyboard accessible</li>
+          <li><strong>Color Contrast:</strong> Ensured sufficient contrast ratios for text readability</li>
+          <li><strong>ARIA Labels:</strong> Added appropriate ARIA attributes for screen readers</li>
+          <li><strong>Focus Indicators:</strong> Clear visual focus indicators for keyboard users</li>
+          <li><strong>Responsive Design:</strong> Content adapts to different screen sizes and zoom levels
+          </li>
+        </ul>
+      </div>
+
+      <div class="accessibility-box">
+        <h3>Testing and Validation</h3>
+        <p>Accessibility was tested using:</p>
+        <ul>
+          <li>WAVE (Web Accessibility Evaluation Tool)</li>
+          <li>Keyboard-only navigation testing</li>
+          <li>Screen reader compatibility (NVDA)</li>
+          <li>Color contrast analyzers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="compliance" class="section">
+      <h2>Compliance</h2>
+
+      <div class="compliance-box">
+        <h3>Janet Regulations Compliance</h3>
+        <p>The implemented pages comply with Janet regulations for web publication:</p>
+        <ul>
+          <li><strong>Content Standards:</strong> All content is appropriate for academic/educational purposes
+          </li>
+          <li><strong>Technical Standards:</strong> Pages validate against W3C HTML5 and CSS3 standards</li>
+          <li><strong>Accessibility Standards:</strong> Meets WCAG 2.1 AA guidelines</li>
+          <li><strong>Performance Standards:</strong> Optimized loading times and resource usage</li>
+          <li><strong>Copyright Compliance:</strong> All images sourced from royalty-free resources with
+            proper attribution</li>
+        </ul>
+      </div>
+
+      <div class="compliance-box">
+        <h3>Areas for Improvement</h3>
+        <p>While the current implementation meets basic compliance requirements, future enhancements could
+          include:</p>
+        <ul>
+          <li>Enhanced performance optimization</li>
+          <li>More comprehensive accessibility testing</li>
+          <li>Additional security measures for form handling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="references" class="section">
+      <h2>References</h2>
+      <div class="references">
+        <ol>
+          <li id="ref1">Economou, D. (2024). <em>Web Design and Development Lecture Notes</em>. University of
+            Westminster - School of CS&E.</li>
+          <li id="ref2">Mozilla Developer Network. (2024). <em>HTML5 Semantic Elements</em>. Retrieved from
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element</li>
+          <li id="ref3">W3C. (2024). <em>CSS3 Specification</em>. Retrieved from https://www.w3.org/Style/CSS/
+          </li>
+          <li id="ref4">Web Content Accessibility Guidelines (WCAG) 2.1. (2018). <em>W3C Recommendation</em>.
+            Retrieved from https://www.w3.org/WAI/WCAG21/Understanding/</li>
+          <li id="ref5">iStockPhoto. (2024). <em>Royalty-free images</em>. Retrieved from
+            https://www.istockphoto.com/</li>
+          <li id="ref6">United Nations. (2024). <em>Sustainable Development Goals</em>. Retrieved from
+            https://sdgs.un.org/goals</li>
+          <li id="ref7">Flexbox Guide. (2024). <em>CSS-Tricks</em>. Retrieved from
+            https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+          <li id="ref8">Grid Guide. (2024). <em>CSS-Tricks</em>. Retrieved from
+            https://css-tricks.com/snippets/css/complete-guide-grid/</li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <a href="#top" class="back-to-top">↑</a>
+</body>
+
+</html>

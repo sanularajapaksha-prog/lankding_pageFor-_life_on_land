@@ -1,0 +1,133 @@
+
+
+/* Main Content */
+.content {
+  padding: 110px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+.card h1 {
+  margin-top: 0;
+  color: #dfffd0;
+}
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+/* Form Inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="datetime-local"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #ddd;
+}
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #4CAF50;
+  background: rgba(255,255,255,0.25);
+}
+
+/* Fieldsets */
+fieldset {
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+legend {
+  padding: 0 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Character Counter */
+.char-counter {
+  font-size: 0.9rem;
+  text-align: right;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Rating Input Buttons */
+.rating-input {
+  display: flex;
+  gap: 5px;
+}
+.rating-input button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.rating-input button.selected,
+.rating-input button:hover,
+.rating-input button:hover ~ button {
+  color: #FFD700;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* CTA & Footer */
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0,150,0,0.4);
+  border-radius: 12px;
+}
+.cta h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+
+  .card, .cta {
+    padding: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+  }
+}

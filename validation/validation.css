@@ -1,0 +1,14 @@
+.validation-grid{
+    width: 80%;
+    height: auto;
+    
+}
+.page-topic{
+    font-size: 34px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

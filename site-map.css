@@ -1,0 +1,108 @@
+/* Sitemap-specific styles */
+.sitemap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.sitemap-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 100, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sitemap-intro h1 {
+    color: #006400;
+    margin-bottom: 1rem;
+}
+
+.sitemap-intro p {
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.sitemap-svg-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: auto;
+    margin-bottom: 2rem;
+}
+
+.sitemap-svg {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+}
+
+/* SVG Styles */
+.node rect {
+    fill: #DFD0B8;
+    stroke: #010123;
+    stroke-width: 2px;
+    rx: 8px;
+    ry: 8px;
+    transition: all 0.3s ease;
+}
+
+.node text {
+    font: 14px sans-serif;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: #010123;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.node:hover rect {
+    fill: #010123;
+}
+
+.node:hover text {
+    fill: white;
+}
+
+.link {
+    stroke: #010123;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.node a {
+    cursor: pointer;
+}
+
+/* Back to top button */
+.back-to-top {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #010123;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #006400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sitemap-svg {
+        min-height: 400px;
+    }
+    
+    .node text {
+        font-size: 12px;
+    }
+}

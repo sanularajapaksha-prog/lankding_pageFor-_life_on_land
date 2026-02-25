@@ -1,0 +1,152 @@
+/* volunteer.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f5fff5;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #006400;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  text-decoration: underline;
+  color: #aaf0d1;
+}
+
+.hero {
+  background: url('volunteer-hero.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e7e34;
+}
+
+.activities {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.activities h2 {
+  color: #006400;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #028b3c;
+  margin-bottom: 0.5rem;
+}
+
+.form-section {
+  padding: 4rem 2rem;
+  background: #e6ffe6;
+}
+
+.form-section h2 {
+  text-align: center;
+  color: #026c3c;
+  margin-bottom: 2rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: #003300;
+  color: white;
+  padding: 1rem;
+}

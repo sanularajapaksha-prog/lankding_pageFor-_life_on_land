@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="pageEditor_validator.css">
+    <link rel="stylesheet" href="style01.css">
+
+</head>
+
+<style>
+    .navbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        
+    }
+    .video-background,
+     video,
+     .overlay,
+     .empty-space {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+
+
+</style>
+
+<body>
+    
+<!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="forest-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="logo">🌱 Life on Land</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html" class="active">Articles</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+    <section class="stud">
+        <h2>K.G.D.Dilmith, Student 03</h2>
+    </section>
+
+    <div class="container">
+        
+        <main>
+            <section>
+                <h2 id="feedback">Feedback</h2>
+                    <h3>Technical Description</h3>
+                        <p>To build the Feedback page, I used HTML tags like "header", "nav", "main", and "footer" to give the page a clear structure. The feedback form was placed inside a "section" tag to separate it from other content. I used "form", "label", and "input" elements to collect user data. Labels were linked to their inputs using the "for" and "id" attributes to make the form more user-friendly and accessible.
+                        In CSS, I styled the page using properties like "padding", "background-color", and "font-family" to make the layout clean and readable. I used "flexbox" to align the form neatly and keep it responsive on different devices.</p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>I added labels to all form inputs so screen readers can describe the fields correctly. The form also includes "aria-required" where needed. I chose high-contrast colors between text and background to help people with low vision. I tested the form with keyboard navigation to make sure users can fill it out without a mouse.</p>
+                    
+                    <h3>Link to the validation page</h3> 
+                        <a href="validation_ST03.html">Student 04 - validation Page</a>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="feedback.html">Feedback</a></p>
+            </section>
+
+            <section>
+                <h2 id="team">Team</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Team page was created using standard tags like "header", "section", and "article" to break the content into logical parts. Each team member was placed in their own "div" with a profile image, name using "h3", and a short bio using "p". The layout was controlled using CSS "grid" to organize members into a clean, multi-column layout.
+                        CSS properties like "border-radius", "box-shadow", and "hover" effects were used to improve the visual design and make the cards more interactive. I also used "max-width" to keep the content readable across devices.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>All images of team members have "alt" text that describes the person, so screen readers can announce their roles. Heading levels were structured in order ("h2", "h3", etc.), and the layout is fully keyboard-accessible. I also avoided flashing or moving elements that could distract or harm users with cognitive sensitivities.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <a href="validation_ST03.html">Student 04 - validation Page</a>
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="team.html">Team</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This page was built to showcase core content using HTML elements like "main", "article", and "h1" to "h3" for structure. I used "p" for text and "img" for images to support the written content. CSS styling was done using "line-height" for readability, and "margin" and "padding" to give spacing between sections. I also used media queries to ensure the content looks good on both phones and desktops.
+                        Key properties like "display: flex" and "text-align" helped keep the layout clean and centered.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>For accessibility, I used alt text for all content images and ensured text had enough contrast from the background. I kept the reading order clear and logical. The navigation can be used with a keyboard, and font sizes are large enough for most users to read easily. I also avoided using color alone to show meaning, such as using icons or underlining for links.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <a href="validation_ST03.html">Student 04 - validation Page</a>
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="wildlife_art.html">Content 04</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>One of the main challenges was getting the layout to work on small screens. At first, elements overlapped or looked too small on mobile. I fixed this by learning how to use "media queries" in CSS and using "flex-direction: column" when the screen size is narrow.
+                    Another challenge was fixing form validation errors in the HTML validator. I learned to check for missing labels, incorrect attribute usage, and open tags. These mistakes helped me understand how to write cleaner and more correct HTML. I also learned that testing accessibility early saves time later.
+
+                    </p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>I made sure all pages follow the Janet regulations for accessibility, layout, and clean HTML structure. This includes using semantic tags like "nav", "main", and "footer", making sure all images have alt text, and checking for contrast ratios. I validated every page using the W3C tools and avoided using JavaScript or features that break accessibility rules. I worked honestly and made sure the pages are suitable for a wide audience.</p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2025) <i>iStock.</i> Available at: <a href="#">https://www.istockphoto.com/</a> (Last accessed: 11 Feb 2025).</li>
+                        <li>Duckett, J., 2011. HTML and CSS: Design and Build Websites,<i>John Willey&Sons. Inc. Indianappolis.W3C (2024). HTML Validator. Available at: https://validator.w3.org/ (Last accessed: 10 Feb 2025).</i></li>
+                        <li> CSS-Tricks (2024). A Complete Guide to Flexbox. Available at: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (Last accessed: 29 Jun 2025).</li>
+                        <li> GOV.UK (2023). Understanding accessibility requirements. Available at: https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps (Last accessed: 30 Jun 2025).</li>
+
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+
+            <ul class="top-level-ul">
+                
+                <li>Student 4</li>
+                    <ul class="no-bullets">
+                        <li><a href="feedback.html">Feedback page </a></li>
+                        <li><a href="team.html">Team page</a></li>
+                        <li><a href="wildlife_art.html">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Life on Land Initiative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

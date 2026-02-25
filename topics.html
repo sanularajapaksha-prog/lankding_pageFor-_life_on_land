@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topics - Life on Land</title>
+  <link rel="stylesheet" href="globle.css" />
+  <link rel="stylesheet" href="topics.css" />
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop><source src="forest-video.mp4" type="video/mp4"></video>
+  </div>
+  <div class="overlay"></div>
+
+  <header class="navbar">
+    <div class="logo">🌱 Life on Land</div>
+    <nav>
+      <ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="about.html">About</a></li>
+          <li><a href="article.html">Articles</a></li>
+          <li><a href="topics.html" class="active">Topics</a></li>
+          <li><a href="team.html">Team</a></li>
+		  <li><a href="table.html">Table</a></li>
+		  <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="controls">
+      <select id="layout-toggle">
+        <option value="grid">Grid View</option>
+        <option value="list">List View</option>
+      </select>
+    </div>
+
+    <section class="cards grid">
+      <article class="topic-card blue">
+        <h2>Rare Bird Species</h2>
+        <p>Rediscovered species in Amazon highlight biodiversity importance.</p>
+        <div class="actions">
+          <a href="rare-bird-species.html" class="btn">Read More</a>
+        </div>
+      </article>
+
+      <article class="topic-card green">
+        <h2>Coral Reef Health</h2>
+        <p>Alarming declines in reef biodiversity; conservation efforts needed.</p>
+        <div class="actions">
+          <a href="coral-reef-health.html" class="btn">Read More</a>
+        </div>
+      </article>
+
+      <article class="topic-card yellow">
+        <h2>Forest Animals</h2>
+        <p>How keystone species impact ecosystem stability.</p>
+        <div class="actions">
+          <a href="forest-animals.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card blue">
+        <h2>Forests: The Lungs of the Earth</h2>
+        <p>Discover how forests support life, provide oxygen, and help regulate our climate and biodiversity.</p>
+        <div class="actions">
+          <a href="article 1.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card green">
+        <h2>Forests and Climate Regulation</h2>
+        <p>Learn how forests act as carbon sinks and affect rainfall, temperature, and global climate balance.</p>
+        <div class="actions">
+          <a href="article 2.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card yellow">
+        <h2>Forests: A Haven of Biodiversity</h2>
+        <p>Explore the layers of life in forests and how they support thousands of species in complex ecosystems.</p>
+        <div class="actions">
+          <a href="article 3.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card blue">
+        <h2>Protection Wildlife </h2>
+        <p>Protection and Restoration of Natural Wildlife Habitats .</p>
+        <div class="actions">
+          <a href="article01.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card green">
+        <h2>Surveillance Technology</h2>
+        <p>Combating Poaching Through Laws and Surveillance Technology.</p>
+        <div class="actions">
+          <a href="article02.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card yellow">
+        <h2> Sustainable Resource </h2>
+        <p>Community-Based Conservation and Sustainable Resource Use.</p>
+        <div class="actions">
+          <a href="article03.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+	  <article class="topic-card blue">
+        <h2>Global Warming </h2>
+        <p>how effot globle warming to the life on land . .</p>
+        <div class="actions">
+          <a href="content_ST4.html" class="btn">Read More</a>
+        </div>
+      </article>
+	  
+    </section>
+  </main>
+
+  <footer>&copy; 2025 Life on Land. All rights reserved.</footer>
+
+  <script>
+    document.getElementById('layout-toggle').addEventListener('change', e => {
+      document.querySelector('.cards').classList.toggle('list', e.target.value === 'list');
+      document.querySelector('.cards').classList.toggle('grid', e.target.value === 'grid');
+    });
+  </script>
+</body>
+</html>

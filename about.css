@@ -1,0 +1,72 @@
+/* about.css */
+
+
+
+.content {
+  padding: 110px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.card h1, .card h2 {
+  margin-top: 0;
+  color: #dfffd0;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 150, 0, 0.4);
+  border-radius: 12px;
+}
+
+.cta h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar nav a {
+    margin-left: 10px;
+    ;
+  }
+
+  .card, .cta {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+}

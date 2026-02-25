@@ -1,0 +1,97 @@
+/* Base & Background */
+
+/* Form Container */
+.login-container {
+  display:flex; justify-content:center; align-items:center;
+  height:100vh; padding:20px;
+}
+.login-form {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding:30px; border-radius:12px;
+  max-width:360px; width:100%;
+  box-shadow:0 4px 16px rgba(0,0,0,0.3);
+  color: #fff;
+}
+.login-form h2 {
+  margin-bottom:20px; font-size:1.5rem; color:#dfffd0;
+}
+
+/* Inputs */
+.form-group {
+  margin-bottom:15px;
+}
+.form-group label {
+  display:block; margin-bottom:5px; font-size:0.9rem;
+}
+.form-group input {
+  width:100%; padding:10px;
+  border:none; border-radius:8px;
+  background: rgba(255,255,255,0.15);
+  color:#fff;
+  font-size:1rem;
+}
+.form-group input::placeholder {
+  color:#ddd;
+}
+
+/* Password toggle */
+.password-wrapper {
+  position:relative;
+}
+.password-wrapper button {
+  position:absolute; top:50%; right:10px;
+  transform:translateY(-50%);
+  background:none; border:none; color:#fff;
+  font-size:1rem; cursor:pointer;
+}
+
+/* Button */
+.btn {
+  width:100%; padding:12px;
+  background:#4CAF50;
+  border:none; border-radius:25px;
+  font-size:1rem; font-weight:bold;
+  color:#fff;
+  margin-top:10px;
+  transition:background 0.3s;
+}
+.btn:hover {
+  background:#45a049;
+}
+
+/* Social login */
+.social-login {
+  text-align:center; margin:20px 0 10px;
+  font-size:0.9rem; color:#ccc;
+}
+.social-buttons {
+  display:flex; justify-content:space-between; gap:10px;
+}
+.btn-social {
+  flex:1; padding:10px;
+  background:rgba(255,255,255,0.2);
+  border:none; border-radius:8px;
+  color:#fff; font-size:0.9rem;
+  transition:background 0.3s;
+}
+.btn-social:hover {
+  background:rgba(255,255,255,0.4);
+}
+
+/* Links */
+.signup-link {
+  text-align:center; margin-top:15px;
+  font-size:0.9rem; color:#ccc;
+}
+.signup-link a {
+  color:#AEE8A1; text-decoration:none;
+}
+.signup-link a:hover {
+  text-decoration:underline;
+}
+
+/* Responsiveness */
+@media screen and (max-width:480px) {
+  .login-form { padding:20px; }
+}

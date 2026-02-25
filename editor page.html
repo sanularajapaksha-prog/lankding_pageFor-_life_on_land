@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Editor - Fathih Laffry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    /* Navbar for sections inside editor page */
+    .editor-navbar {
+      background-color: #388e3c;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .editor-navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .editor-navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .editor-navbar a:hover {
+      color: #c8e6c9;
+    }
+
+    /* Center container for main content + sidebar */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+
+    main {
+      flex: 3;
+    }
+
+    aside {
+      flex: 1;
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-left: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .student-info {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Page Editor</h1>
+  </header>
+
+  <!-- Internal Navbar for Editor Sections -->
+  <nav class="editor-navbar">
+    <ul>
+      <li><a href="#editor-content">Content Page</a></li>
+      <li><a href="#editor-challenges">Challenges</a></li>
+      <li><a href="#editor-validation">Validation Report</a></li>
+    </ul>
+  </nav>
+
+  <section class="student-info">
+    <h2>Name - Fathih Laffry</h2>
+    <h3>Role - Student 01</h3>
+  </section>
+
+  <div class="container">
+    <main>
+      <section id="editor-content">
+        <h2>Content Page</h2>
+        <h3>Technical Description</h3>
+        <p>
+          This page showcases article cards related to the theme "Life on Land".
+          It uses HTML, CSS, and a video background for visual appeal.
+        </p>
+        <ul>
+          <li>Video background in header for dynamic visuals.</li>
+          <li>Navigation bar with smooth scroll behavior.</li>
+          <li>Responsive article cards using Flexbox.</li>
+          <li>Hover effects on cards for interactivity.</li>
+        </ul>
+
+        <h3>Accessibility</h3>
+        <p>
+          Accessibility considerations include clear fonts, contrasting colors,
+          descriptive alt text for images, and keyboard navigation support.
+        </p>
+
+        <h3>Link to the Validation Page</h3>
+        <p><a href="validation.html">Go to Validation Report for Content Page</a></p>
+
+        <h3>Link to the Page</h3>
+        <p><a href="Article cards.html" target="_blank">Open Content Page (Article Cards)</a></p>
+
+        <h3>Link to the Splash Screen Page</h3>
+        <p><a href="Splash Screen.html" target="_blank">Open Splash Screen Page</a></p>
+      </section>
+
+      <section id="editor-challenges">
+        <h2>Challenges & Lessons Learned</h2>
+        <p>
+          Key challenges included ensuring video backgrounds work smoothly
+          across devices and maintaining responsive design for article cards.
+        </p>
+      </section>
+
+      <section id="editor-validation">
+        <h2>Validation Report</h2>
+        <p>
+          View my validation reports, including reflections and snapshots.
+        </p>
+        <ul>
+          <li><a href="validation.html">My Validation Page</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <aside>
+      <h3>Pages Developed</h3>
+      <ul>
+        <li><a href="Splash Screen.html">Splash Screen</a></li>
+        <li><a href="Volunteer.html">Volunteer Page</a></li>
+        <li><a href="Article cards.html">Content Page</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Life on Land Initiative. All rights reserved.</p>
+  </footer>
+</body>
+</html>

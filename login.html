@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Life on Land</title>
+  <link rel="stylesheet" href="globle.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="forest-video.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="overlay"></div>
+
+  <main class="login-container">
+    <form id="loginForm" class="login-form">
+      <h2>Welcome Back</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" required placeholder="••••••••">
+          <button type="button" id="togglePass" aria-label="Toggle password visibility">👁️</button>
+        </div>
+      </div>
+      <button type="submit" class="btn">Log In</button>
+      <p class="social-login">Or continue with:</p>
+      <div class="social-buttons">
+        <button type="button" class="btn-social">Google</button>
+        <button type="button" class="btn-social">Facebook</button>
+      </div>
+      <p class="signup-link">Don’t have an account? <a href="Validation.html">Sign Up</a></p>
+    </form>
+  </main>
+
+</body>
+</html>

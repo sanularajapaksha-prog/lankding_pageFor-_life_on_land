@@ -1,0 +1,127 @@
+
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fcfcfc;
+  font-size: 18px;
+  padding-top: 90px; /* for fixed header spacing */
+}
+
+/* ===== Header/Navbar ===== */
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background:rgba(0, 100, 0, 0.8);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(219, 219, 219, 0.3);
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #DFD0B8;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 10px;
+  left: 0;
+  background: #DFD0B8;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar-icons {
+  margin-left: 20px;
+}
+
+.navbar-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-icons a:hover {
+  color: #DFD0B8;
+  transform: scale(1.2);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #010123;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #DFD0B8;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+footer .social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: #DFD0B8;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet Our Team</title>
+  <link rel="stylesheet" href="globle.css" />
+  <link rel="stylesheet" href="team.css" />
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="forest-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div>
+
+  <div class="navbar">
+    <div class="logo">🌱 Life on Land</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="article.html">Articles</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="team.html"class="active">Team</a></li>
+        <li><a href="table.html">Table</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <section class="content">
+    <h1>Meet Our Team</h1>
+    <div class="team-grid">
+      <!-- Team Members -->
+      <div class="team-card" onclick="openModal('sanula')">
+        <img src="https://placehold.co/200x200/6b8e23/ffffff?text=sanula" alt="Photo of sanula, Team leader"/>
+        <h3>Sanula</h3>
+        <p>Team Lead & Sustainability Expert</p>
+      </div>
+
+      <div class="team-card" onclick="openModal('gayan')">
+        <img src="https://placehold.co/200x200/4682b4/ffffff?text=gayan" alt="Photo of Bob Lee, Developer" />
+        <h3>Gayan</h3>
+        <p>Lead Developer & UX Designer</p>
+      </div>
+
+      <div class="team-card" onclick="openModal('fath')">
+        <img src="https://placehold.co/200x200/db7093/ffffff?text=fath" alt="Photo of Charlie Brown, Content Writer" />
+        <h3>Fath</h3>
+        <p>Content Writer & Editor</p>
+      </div>
+
+      <div class="team-card" onclick="openModal('dinil')">
+        <img src="https://placehold.co/200x200/db7093/ffffff?text=dinil" alt="Photo of Charlie Brown, Content Writer" />
+        <h3>Dinil</h3>
+        <p>Content Writer & Editor</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="sanula" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('sanula')">&times;</span>
+      <h2>Sanula</h2>
+      <p>Oversaw project management and content curation. Focused on promoting sustainability and biodiversity.</p>
+    </div>
+  </div>
+
+  <div id="gayan" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('gayan')">&times;</span>
+      <h2>Gayan</h2>
+      <p>Developed the entire website structure and designed the responsive UI to ensure a seamless user experience.</p>
+    </div>
+  </div>
+
+  <div id="fath" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('fath')">&times;</span>
+      <h2 href="wildlife_art.html" >Fath</h2>
+      <p>Created and edited articles, ensuring clarity and consistency across sustainability topics.</p>
+    </div>
+  </div>
+
+  <div id="dinil" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('dinil')">&times;</span>
+      <h2>Dinil</h2>
+      <p>Produced well-researched, engaging articles to boost awareness and promote environmental action.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Life on Land | Built with passion for the planet 🌍
+  </footer>
+
+  
+</body>
+</html>

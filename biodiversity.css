@@ -1,0 +1,118 @@
+/* Container for main content */
+header {
+  padding: 0.1px ;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 100px auto 50px; /* margin-top adjusted for fixed navbar */
+  padding: 0 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Page main heading */
+.content h1 {
+  color: #004d00;
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Subheadings */
+.content h2 {
+  color: #2a662a;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 0.3rem;
+}
+
+/* Paragraph text */
+.content p {
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 1.3rem;
+}
+
+/* Images styling */
+.content img {
+  display: block;
+  margin: 1rem auto 2rem;
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Table styling */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.content table thead tr {
+  background-color: #4caf50;
+  color: white;
+}
+
+.content table th,
+.content table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.content table tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* List of articles */
+.content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.content ul li {
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.content ul li a {
+  color: #2a662a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.content ul li a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+  .content {
+    margin: 120px 1rem 40px;
+    padding: 0 10px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content ul li {
+    font-size: 1rem;
+  }
+}

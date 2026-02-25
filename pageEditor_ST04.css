@@ -1,0 +1,111 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #003300;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar .student-info {
+  margin-bottom: 2rem;
+}
+
+.sidebar .student-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #7CFC00;
+}
+
+.sidebar .student-info p {
+  font-size: 0.9rem;
+}
+
+.sidebar .nav-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar .nav-links li {
+  margin: 1rem 0;
+}
+
+.sidebar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s, padding-left 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.sidebar .nav-links a:hover {
+  background: #7CFC00;
+  color: #003300;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+/* Content Area */
+.content-area {
+  margin-left: 270px;
+  padding: 2rem;
+}
+
+.content-area h2 {
+  color: #003300;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #7CFC00;
+  padding-bottom: 5px;
+}
+
+.content-area h3 {
+  margin-top: 1.5rem;
+  color: #145214;
+  font-size: 1.2rem;
+}
+
+.content-area p {
+  margin: 0.5rem 0;
+}
+
+.content-area ul.ref-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.content-area ul.ref-list li {
+  margin-bottom: 0.8rem;
+  list-style-type: disc;
+}
+
+/* Footer */
+footer {
+  background: #003300;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  position: relative;
+  left: 270px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life on Land - Page Editor</title>
+  <link rel="stylesheet" href="pageEditor.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-label="Life on Land News">Life on Land</div>
+      <div class="search-bar">
+        <input type="search" aria-label="Search pages" placeholder="Search pages..." />
+        <span class="material-icons" aria-hidden="true">search</span>
+      </div>
+      <nav class="category-tabs" aria-label="Site Navigation">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="article.html">Article</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="reading-list.html">Reading List</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="pageEditor.html" class="active" aria-current="page">Page Editor</a>
+      </nav>
+      <div class="user-menu" aria-label="User menu">
+        <a href="bookmarks.html" title="Bookmarks" aria-label="Bookmarks">
+          <span class="material-icons">bookmark</span>
+        </a>
+        <a href="pageEditor.html" title="Page Editor" aria-label="Page Editor">
+          <span class="material-icons">account_circle</span>
+        </a>
+      </div>
+    </header>
+
+    <aside class="sidebar" aria-label="Categories and Trending Topics">
+      <section>
+        <h2>Categories</h2>
+        <ul class="category-list">
+          <li><a href="categories.html">Biodiversity (34)</a></li>
+          <li><a href="categories.html">Conservation (21)</a></li>
+          <li><a href="categories.html">Forests (18)</a></li>
+          <li><a href="categories.html">Sustainability (27)</a></li>
+          <li><a href="categories.html">Wildlife (12)</a></li>
+        </ul>
+      </section>
+      <section class="trending-topics" aria-label="Trending topics">
+        <h2>Trending Topics</h2>
+        <ul>
+          <li><a href="article.html">Amazon Rainforest Preservation</a></li>
+          <li><a href="article.html">Endangered Species Update</a></li>
+          <li><a href="article.html">Climate Change Impact</a></li>
+          <li><a href="article.html">Reforestation Efforts</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="editor-main" aria-label="Page editor report">
+      <h1>My Page Editor</h1>
+      <section>
+        <h2>About Me</h2>
+        <p>Name: [Your Name]</p>
+        <p>Role: Web Developer & Content Creator</p>
+      </section>
+
+      <section>
+        <h2>Completed Tasks / Pages</h2>
+        <ul>
+          <li><a href="index.html" target="_blank" rel="noopener">Home Page</a></li>
+          <li><a href="bookmarks.html" target="_blank" rel="noopener">Bookmarks Page</a></li>
+          <li><a href="reading-list.html" target="_blank" rel="noopener">Reading List Page</a></li>
+          <!-- Add your other pages you've worked on here -->
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Description</h2>
+        <p>This site uses semantic HTML5 elements, CSS Grid layout for responsive design, and Google Material Icons for visual icons. CSS is separated into page-specific files to keep styles modular. Accessibility best practices like ARIA labels and keyboard navigation are implemented.</p>
+      </section>
+
+      <section>
+        <h2>Challenges and Lessons Learned</h2>
+        <p>Describe any challenges you faced and what you learned about responsive design, accessibility, or modular CSS during development.</p>
+      </section>
+
+      <section>
+        <h2>Accessibility Compliance</h2>
+        <p>All pages have been designed to meet WCAG AA standards with proper semantic tags, alt texts on images, and keyboard operability.</p>
+      </section>
+
+      <section>
+        <h2>References</h2>
+        <ul>
+          <li><a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Inter Font - Google Fonts</a></li>
+          <li><a href="https://fonts.google.com/icons" target="_blank" rel="noopener">Google Material Icons</a></li>
+          <li><a href="https://www.placehold.co/" target="_blank" rel="noopener">Placehold.co - Placeholder Images</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG Guidelines</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <aside class="rightbar" aria-label="Trending Articles and Bookmarks">
+      <section>
+        <h2>Trending Articles</h2>
+        <ul class="trending-list">
+          <li><a href="article.html">Protecting Endangered Species</a></li>
+          <li><a href="article.html">Climate Impacts on Forest Fires</a></li>
+          <li><a href="article.html">Innovations in Conservation Technology</a></li>
+          <li><a href="article.html">Global Efforts to Save Wildlife</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Bookmarks</h2>
+        <ul class="bookmark-list">
+          <li><a href="article.html">Protecting the World's Diverse Forest Ecosystems</a></li>
+          <li><a href="article.html">Reforestation and Sustainable Land Use Strategies</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <footer>
+      &copy; 2025 Life on Land News. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
